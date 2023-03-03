@@ -17,6 +17,8 @@ public class UserRegistration {
         String password = scan.nextLine();
         System.out.println("Enter the password at least one upper case: ");
         String password1 = scan.nextLine();
+        System.out.println("Enter the at least one numeric Number: ");
+        String password2 = scan.nextLine();
 
         // To check first name with regex which starts with uppercase and has min 3 char.
         if (Pattern.matches("^[A-Z]{1}[a-z]{2,}$", firstName)) {
@@ -52,6 +54,12 @@ public class UserRegistration {
         }
         // To check password having atleast one uppercase
         if (Pattern.matches("^[A-Z]+[a-z].{7}", password1)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+        // To check password having one numric key
+        if (Pattern.matches("^[A-Z]+(a-z0-9){7}", password2)) {
             System.out.println("True");
         } else {
             System.out.println("False");
