@@ -3,10 +3,10 @@ import java.util.regex.Pattern;
 public class EmailSamplesValidation {
     public void email1(String value){
         if(Pattern.matches("^([a-z0-9]+)@([a-z]+).([a-z]{2,8})$",value)){
-            System.out.println(value + "---> This "+" Email is Valid");
+            System.out.println(value + "--> This "+" Email is Valid");
         }
         else {
-            System.out.println(value + "---> This "+" Email is Invalid");
+            System.out.println(value + "--> This "+" Email is Invalid");
         }
     }
     public void email2(String value){
