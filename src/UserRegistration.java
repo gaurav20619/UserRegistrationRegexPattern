@@ -13,28 +13,37 @@ public class UserRegistration {
         String mail = scan.nextLine();
         System.out.println("Enter The Mobile Number With County Code : ");
         String mobileNumber = scan.nextLine();
+        System.out.println("Enter the valid password: ");
+        String password = scan.nextLine();
 
+        // To check first name with regex which starts with uppercase and has min 3 char.
         if (Pattern.matches("^[A-Z]{1}[a-z]{2,}$", firstName)) {
             System.out.println("True");
         } else {
             System.out.println("False");
         }
 
-        // Method To Check Last Name With Regex Start With Cap And 3 Min. Character
+        //  To Check Last Name With Regex Start With Cap And 3 Min. Character
         if (Pattern.matches("^[A-Z]{1}[a-z]{2,}$", lastName)) {
             System.out.println("True");
         } else {
             System.out.println("False");
         }
 
-        // Method to check Valid Mail with Regex
+        //  To check Valid Mail with Regex
         if (Pattern.matches("^[a-zA-Z0-9]+[@][a-zA-Z]{3,15}[.][a-zA-Z]{2,5}", mail)) {
             System.out.println("True");
         } else {
             System.out.println("False");
         }
-        // Method to check valid mobile number with Regex
+        //  To check valid mobile number with Regex
         if (Pattern.matches("^[+]91{1}\\s[0-9]{10}", mobileNumber)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+        // To check password having minimum eight char
+        if (Pattern.matches("^[A-Za-z1-8]{8}$", password)) {
             System.out.println("True");
         } else {
             System.out.println("False");
